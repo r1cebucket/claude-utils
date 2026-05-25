@@ -12,7 +12,7 @@ When creating a new skill, follow this standard format:
 
 Before generating, clarify:
 
-- **Where skills live?** (personal, project or subdirectory in project)
+- **Where skills live?** (personal or project)
 - **What problem does this skill solve?**
 - **When should Claude auto-invoke it?** (auto-invocation requires a clear `description`)
 - **What tools does it need?** (restrict with `allowed-tools` if needed)
@@ -31,12 +31,6 @@ For project (this project only):
 
 ```bash
 mkdir -p .claude/skills/<skill-name>
-```
-
-For subdirectory in project:
-
-```bash
-mkdir -p <subdirectory>/.claude/skills/<skill-name>
 ```
 
 ### 3. Write SKILL.md with frontmatter and content
