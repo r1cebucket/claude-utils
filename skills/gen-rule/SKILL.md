@@ -9,14 +9,17 @@ disable-model-invocation: false
 ### 1. Determine rule scope
 
 - Confirm which scope user want.
-- **User-level rules**: `~/.claude/rules/<name>.md`
-- **Project-level rules**: `.claude/rules/<name>.md`
+  - **User-level rules**: `~/.claude/rules/<name>.md`
+  - **Project-level rules**: `.claude/rules/<name>.md`
+- Confirm which dir to place the rule file.
+  - Consider which directories are suitable to put the rule file, give user some suggestions.
+  - Ask user to confirm the directory.
 
 ### 2. Create the directory if needed
 
 ```bash
-mkdir -p ~/.claude/rules          # user scope
-mkdir -p .claude/rules            # project scope
+mkdir -p ~/.claude/rules/<subdir>  # user scope with subdir
+mkdir -p .claude/rules/<subdir>   # project scope with subdir
 ```
 
 ### 3. Write the rule file
